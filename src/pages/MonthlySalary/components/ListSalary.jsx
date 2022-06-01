@@ -47,7 +47,7 @@ ListSalary.propTypes = {
   listSalary: PropTypes.arrayOf(
     PropTypes.shape({
       money: PropTypes.string.isRequired,
-      createdAt: PropTypes.string.isRequired,
+      createdAt: PropTypes.number.isRequired,
     }),
   ).isRequired,
 };

@@ -2,6 +2,7 @@ import Button from '@components/Button';
 import Input from '@components/Input';
 import React, { useState } from 'react';
 import { randomId } from '@utils/functions';
+import { ToastContainer, toast } from 'react-toastify';
 import ListSalary from './components/ListSalary';
 import Pagination from './components/Pagination';
 
@@ -44,6 +45,7 @@ function Deposit() {
   };
 
   const handleChange = ({ value }) => {
+    if (isNaN(value)) return;
     setSalary({
       ...salary,
       money: value,
@@ -52,6 +54,21 @@ function Deposit() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (salary.money[0] === '0') {
+      toast.error('Invalid money!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      clearText();
+      return;
+    }
+
     setListSalary([...listSalary, salary]);
     clearText();
   };
@@ -99,6 +116,7 @@ function Deposit() {
         />
       </div>
       <ListSalary listSalary={currentSalaries} />
+      <ToastContainer />
     </div>
   );
 }
