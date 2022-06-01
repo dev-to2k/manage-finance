@@ -1,7 +1,7 @@
-import { DefaultLayout } from "@/components/Layout";
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { publicRouters } from "./routes";
+import { DefaultLayout } from '@components/Layout';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { publicRouters } from './routes';
 
 function App() {
   return (

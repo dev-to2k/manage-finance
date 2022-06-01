@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <div className="navbar bg-base-100 shadow">
       <div className="flex-1">
-        <a href="#" className="btn btn-ghost text-xl normal-case">
+        <Link to="/" className="btn btn-ghost text-xl normal-case">
           Manage Finance
-        </a>
+        </Link>
       </div>
       <div className="flex-none gap-2">
         <div className="form-control">
@@ -17,7 +18,7 @@ function Header() {
           />
         </div>
         <div className="dropdown-end dropdown">
-          <label tabIndex={0} className="avatar btn btn-ghost btn-circle">
+          <label className="avatar btn btn-ghost btn-circle">
             <div className="w-10 rounded-full">
               <img
                 src="https://api.lorem.space/image/face?hash=33791"
@@ -25,10 +26,7 @@ function Header() {
               />
             </div>
           </label>
-          <ul
-            tabIndex={0}
-            className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
-          >
+          <ul className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow">
             <li>
               <a href="#" className="justify-between">
                 Profile

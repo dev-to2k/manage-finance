@@ -1,17 +1,17 @@
-import Dashboard from "@/pages/Dashboard";
-import MonthlySalary from "@/pages/MonthlySalary";
+import Dashboard from '@pages/Dashboard';
+import MonthlySalary from '@pages/MonthlySalary';
 
 const publicRouters = [
   {
-    path: "/",
+    path: '/',
     component: Dashboard,
   },
   {
-    path: "/monthly-salary",
+    path: '/monthly-salary',
     component: MonthlySalary,
   },
 ];
 
 const privateRouters = [];
 
-export { publicRouters, privateRouters};
+export { publicRouters, privateRouters };
